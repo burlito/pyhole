@@ -20,7 +20,8 @@ import os
 import sys
 
 
-__VERSION__ = "0.6.6-xlc"
+__VERSION__ = "0.6.6-xlc-1"
+__PYHOLE_URL__ = 'https://github.com/burlito/pyhole'
 
 
 def current_git_hash():
@@ -46,9 +47,9 @@ def version_string():
     """Return the full version"""
     git_hash = current_git_hash()
     if git_hash:
-        return "pyhole v%s (%s) - http://pyhole.org" % (__VERSION__, git_hash)
+        return "pyhole v%s (%s) - %s" % (__VERSION__, git_hash, __PYHOLE_URL__)
 
-    return "pyhole v%s - http://pyhole.org" % __VERSION__
+    return "pyhole v%s - %s" % (__VERSION__, __PYHOLE_URL__)
 
 
 def version_hash():
